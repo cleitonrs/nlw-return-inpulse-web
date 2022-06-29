@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Widget } from './components/Widget'
+import { FaSun, FaMoon } from 'react-icons/fa'
 
 export const App = () => {
   const [theme, setTheme] = useState('')
@@ -20,9 +21,23 @@ export const App = () => {
     }
   }, [theme])
 
+  const handleThemeSwitch = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
+
   return (
-    <div>
-      <Widget />
-    </div>
+    <>
+      <button
+       type="button"
+       onClick={handleThemeSwitch}
+       className="fixed z-10 right-40 bottom-7 bg-slate-500 text-lg p-2 rounded-full  " 
+      >
+        {theme === 'dark' ? <FaMoon className="w-full h-full text-white"></FaMoon>  : <FaSun className="w-full h-full text-white"></FaSun>}
+        
+      </button>
+      <div>
+        <Widget />
+      </div>
+    </>  
   )
 }
