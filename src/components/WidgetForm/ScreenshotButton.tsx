@@ -35,7 +35,7 @@ export const ScreenshotButton = ({ screenshot, onScreenshotTook }: ScreenshotBut
           backgroundSize: 180,
         }}
       >
-        <Trash weight="fill" className="text-zinc-600 dark:text-zinc-800 dark:hover:text-zinc-600 hover:text-zinc-400"/>
+        <Trash weight="fill" className="text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-600 hover:text-zinc-400"/>
       </button>
     )
   }
